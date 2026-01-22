@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects · Your Name</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="layout">
       <aside class="sidebar">
         <div class="name">Your Name</div>
-        <div class="subtitle">Engineering Student · City, State</div>
+        <div class="subtitle">Engineering Student | Boston, Massachusetts</div>
 
         <nav class="nav">
           <a href="index.html">Home</a>
@@ -28,20 +28,35 @@
         <h1>Projects</h1>
 
         <div class="card">
-          <strong>Project 1 Title</strong>
-          <p class="small">What it does, why it matters, what you learned.</p>
+          <strong>RC UAV with observation capabilities</strong>
+          <p class="small">This project consisted of various different aspects which I had to combine into one working system. The plane included custom coded controls, operated by
+          flight simulator joystick, connected by ESP32 microcontrollers, and had Rylr998 radio modules to maintain communication. It was built in SolidWorks CAD initially to 
+          get a preliminary design and create the blueprints for the foamboard structure of the wing. I used Solidworks Flow Simulation to optimize the chord length of the aircraft and
+          also selected the SD7037 airfoil as it has very good performance at lower Reynolds numbers, since the drone typically operates at a Reynolds number lower than 1 million.
+          The aircraft uses a 1000kv brushless motor with a 10x4 propeller which gives adequate thrust, and servos for the control surfaces and camera module. 
+          <br>The controls were mapped with Python by first taking the 
+          joystick's data and sending it using serial communication through a USB port. This data onboard one ESP32 was sent through the transmitter radio to a reciever, which was 
+          connected to the aircraft's ESP32. Due to the radio modules being long range but with a low data rate, the byte size had to be optimized in C++ as low as possible to
+          increase the data rate between the transmitter and reciever. Most of the individual data values were packed to 1 byte, which gives a range of 255 and contains the 
+          joystick's integer range of 0 to 180. Apart from the main control surfaces on the aircraft, there is a 2-axis gimbal mounted on the underside of the UAV which allows 
+          for rotation in a semi-sphere range underneath the aircraft and can be either mounted with a small video camera or a live FPV camera.</p>
           <p class="small">
-            Tech: Python, C++, Arduino, etc.<br />
-            Links: <a href="https://github.com/yourusername/project1">GitHub</a>
+            Tools & Skills: SolidWorks, CFD, ESP32 Microcontroller, Python, C++<br />
+            Links: <a href="https://github.com/budgetcuts1/RCUAVProject_1">GitHub</a>
           </p>
+          <img src="images/rcuav1.JPG">
         </div>
 
         <div class="card">
-          <strong>Project 2 Title</strong>
-          <p class="small">One clean paragraph. Mention any metrics if you have them.</p>
+          <strong>PCB Flight Controller</strong>
+          <p class="small">This flight controller was designed to be able to handle a large variety of PWM ports and have a wide range of capabilities for different ports and sensors.
+          The microcontroller used is a STM32H743, and the board includes a port for an ELRS reciever, GPS, 14 PWM, analog sensors and voltage measurement, and a SPI interface port.
+          The board is designed mainly for fixed-wing aircraft, and specifically a VTOL aircraft which is why there are so many PWM pins, but the board can be used with quadcopters too.
+          I also included a USB port on the flight controller to be able to load software onto the microcontroller such as Ardupilot. 
+          I tried to keep the board size relatively small, and size comes in around a 70mmx70mm square. </p>
           <p class="small">
-            Tech: …<br />
-            Links: <a href="https://github.com/yourusername/project2">GitHub</a>
+            Tools & Skills: PCB Design, KiCAD, STM32 Microcontroller<br />
+            Links: <a href="https://github.com/budgetcuts1/deltaflightcontroller_v1">GitHub</a>
           </p>
         </div>
       </main>
