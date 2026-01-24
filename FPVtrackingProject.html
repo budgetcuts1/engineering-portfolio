@@ -34,7 +34,7 @@
             involves using two ESP32 microcontrollers, two RYLR998 radio modules, and a Pololu MINIMU-9 gyroscope/accelerometer/magnetometer. 
             The device works by calculating the angles for pitch and yaw from raw IMU measurements and then sending that over the RYLR998 radio from
             the transmitter to the reciever to actuate the reciever side's servos.<br><br>My original code at trying to take the angle from the raw
-            measurements was somewhat succesful but experienced a lot of drift which made it unreliable for use longer than a minute. This was
+            measurements was somewhat successful but experienced a lot of drift which made it unreliable for use longer than a minute. This was
             inadequate for the system so instead I opted to use an open source repository called MINIMU9 AHRS made by Pololu, the company where the 
             MINIMU-9 sensor is from. This system has much more accurate directional tracking and filtering which was needed to get a solid angle calculation. I then
             added on callibration adjustments and my radio code to send the data from the transmitter to the reciever.
