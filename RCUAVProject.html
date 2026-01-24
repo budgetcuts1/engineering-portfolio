@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, Massachusetts<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="active projectmargin" href="RCUAVProject.html">RC UAV</a>
+          <a class="projectmargin" href="flightcontrollerandelrspcbProject.html">Flight Controller & ELRS Reciever PCB</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">Radio FPV Orientation Tracking</a>
+          <a class="projectmargin" href="4SbatteryProject.html">4S Battery Pack</a>
+          <a href="contact.html" class="nav-header">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+
+        <div class="card">
+          <strong>RC UAV with observation capabilities</strong>
+          <p class="small">This project consisted of various different aspects which I had to combine into one working system. The plane included custom coded controls, operated by
+          flight simulator joystick, connected by ESP32 microcontrollers, and had Rylr998 radio modules to maintain communication. It was built in SolidWorks CAD initially to 
+          get a preliminary design and create the blueprints for the foamboard structure of the wing. I used Solidworks Flow Simulation to optimize the chord length of the aircraft and
+          also selected the SD7037 airfoil as it has very good performance at lower Reynolds numbers, since the drone typically operates at a Reynolds number lower than 1 million.
+          The aircraft uses a 1000kv brushless motor with a 10x4 propeller which gives adequate thrust, and servos for the control surfaces and camera module. 
+          <br><br>The controls were mapped with Python by first taking the 
+          joystick's data and sending it using serial communication through a USB port. This data onboard one ESP32 was sent through the transmitter radio to a reciever, which was 
+          connected to the aircraft's ESP32. Due to the radio modules being long range but with a low data rate, the byte size had to be optimized in C++ as low as possible to
+          increase the data rate between the transmitter and reciever. Most of the individual data values were packed to 1 byte, which gives a range of 255 and contains the 
+          joystick's integer range of 0 to 180. Apart from the main control surfaces on the aircraft, there is a 2-axis gimbal mounted on the underside of the UAV which allows 
+          for rotation in a semi-sphere range underneath the aircraft and can be either mounted with a small video camera or a live FPV camera.</p>
+          <p class="small">
+            Tools & Skills: SolidWorks, CFD, ESP32 Microcontroller, Python, C++<br />
+            Links: <a href="https://github.com/budgetcuts1/RCUAVProject_1">RC UAV GitHub</a>
+          </p>
+          <img src="images/rcuav1.JPG" class="smallimage">
+          <img src="images/rcuavcfd1.jpg" class="mediumimage">
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

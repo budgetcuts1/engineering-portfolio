@@ -1,0 +1,150 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --border: #e6e6e6;
+  --link: #0b57d0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* p {
+  font-family: "Segoe UI", 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+  color:#2d2d2d
+} */
+
+.section-title {
+  font-size: 18px;    
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 16px;   
+  margin-bottom: 4px;   
+  padding-left: 0px;   
+}
+
+.nav-header {
+  font-weight: 700;
+  font-size: 18px;    
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #a1c6ff;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #111111;
+  margin-bottom: 18px;
+}
+
+.smallsubtitle {
+  font-size: 16px;
+  color: #111111;
+  margin-bottom: 18px;
+}
+
+.nav a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.nav a:hover {
+  background: #f5f5f5;
+}
+
+.nav a.active {
+  background: #f0f3ff;
+  color: var(--link);
+  font-weight: 600;
+}
+
+.main {
+  padding: 32px 24px;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #efefef
+}
+
+h1 { font-size: 28px; margin: 0 0 12px; }
+h2 { font-size: 18px; margin: 24px 0 10px; }
+
+.card {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 12px 0;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+a { color: var(--link); }
+
+h3 {
+  margin-right: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.projectmargin {
+  margin-left: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.largeimage {
+  width: 750px;
+  height: auto;
+}
+
+.mediumimage {
+  width: 600px;
+  height: auto;
+}
+
+.smallimage {
+  width: 500px;
+  height: auto;
+}
+
+figure {
+  display: inline-block;
+  vertical-align: top; /* Keeps images aligned at the top */
+  margin-right: 15px;  /* Space between the two figures */
+}
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, Massachusetts<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="projectmargin" href="RCUAVProject.html">RC UAV</a>
+          <a class="projectmargin" href="flightcontrollerandelrspcbProject.html">Flight Controller & ELRS Reciever PCB</a>
+          <a class="active projectmargin" href="FPVtrackingProject.html">Radio FPV Orientation Tracking</a>
+          <a class="projectmargin" href="4SbatteryProject.html">4S Battery Pack</a>
+          <a href="contact.html" class="nav-header">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+
+        <div class="card">
+          <strong>FPV Orientation Tracking with Radio</strong>
+          <p class="small">This project involves a transmitter and reciever, which is designed to record the direction you are facing and then
+            convert that into a signal that is sent to two servos by radio and points a camera in the same direction. This
+            involves using two ESP32 microcontrollers, two RYLR998 radio modules, and a Pololu MINIMU-9 gyroscope/accelerometer/magnetometer. 
+            The device works by calculating the angles for pitch and yaw from raw IMU measurements and then sending that over the RYLR998 radio from
+            the transmitter to the reciever to actuate the reciever side's servos.<br><br>My original code at trying to take the angle from the raw
+            measurements was somewhat succesful but experienced a lot of drift which made it unreliable for use longer than a minute. This was
+            inadequate for the system so instead I opted to use an open source repository called MINIMU9 AHRS made by Pololu, the company where the 
+            MINIMU-9 sensor is from. This system has much more accurate directional tracking and filtering which was needed to get a solid angle calculation. I then
+            added on callibration adjustments and my radio code to send the data from the transmitter to the reciever.
+          </p>
+          <p class="small">
+            Tools & Skills: ESP32 Microcontroller, C++<br />
+            Links: <a href="https://github.com/budgetcuts1/tracker_gimbal_1">Original Gimbal Tracker Attempt Github</a> 
+            <a href="https://github.com/budgetcuts1/tracker_gimbal_improved">Improved Gimbal Tracker Github</a>
+            </a>
+          </p>
+          <img src="images/cameragimbal1.jpg" class="smallimage">
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

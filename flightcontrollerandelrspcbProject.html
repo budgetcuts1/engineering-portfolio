@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, Massachusetts<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="projectmargin" href="RCUAVProject.html">RC UAV</a>
+          <a class="active projectmargin" href="flightcontrollerandelrspcbProject.html">Flight Controller & ELRS Reciever PCB</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">Radio FPV Orientation Tracking</a>
+          <a class="projectmargin" href="4SbatteryProject.html">4S Battery Pack</a>
+          <a href="contact.html" class="nav-header">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+        <div class="card">
+          <strong>PCB Flight Controller and ELRS reciever</strong>
+          <p class="small">This flight controller was designed to be able to handle a large variety of PWM ports and have a wide range of capabilities for different ports and sensors.
+          The microcontroller used is a STM32H743, and the board includes a port for an ELRS reciever, GPS, 14 PWM, analog sensors and voltage measurement, and a SPI interface port.
+          The board is designed mainly for fixed-wing aircraft, and specifically a VTOL aircraft which is why there are so many PWM pins, but the board can be used with quadcopters too.
+          I also included a USB port on the flight controller to be able to load software onto the microcontroller such as Ardupilot. 
+          I tried to keep the board size relatively small, and size comes in around a 70mmx70mm square.<br><br>The ELRS reciever is a module designed
+          to be used with any sort of radio-controlled drone or car. It has 7 PWM outputs built into the board or can be
+          or can be simply used as TX and RX through two UART pins located on the board. The board contains two pins for a large external capacitor (470-1000uF) and ADC voltage measurement
+          with data ELRS is able to send back to the transmitter.</p>
+          <p class="small">
+            Tools & Skills: PCB Design, KiCAD, STM32 Microcontroller<br />
+            Links: <a href="https://github.com/budgetcuts1/deltaflightcontroller_v1">Flight Controller GitHub</a>
+            <a href = "https://github.com/budgetcuts1/elrsreciever7PWM">ELRS Reciever Github</a>
+          </p>
+          <figure>
+          <figcaption>PCB Flight Controller</figcaption>
+          <img src="images/deltaflightcontroller3dview_1.jpg" class="smallimage">
+          </figure>
+          <figure>
+          <figcaption>ELRS Reciever </figcaption>
+          <img src="images/elrsreciever3dview_1.jpg" class="smallimage">
+          </figure>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
