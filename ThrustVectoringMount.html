@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, Massachusetts<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="projectmargin" href="RCUAVProject.html">RC UAV</a>
+          <a class="projectmargin" href="flightcontrollerandelrspcbProject.html">Flight Controller & ELRS Reciever PCB</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">Radio FPV Orientation Tracking</a>
+          <a class="projectmargin" href="4SbatteryProject.html">4S Battery Pack</a>
+          <a class="active projectmargin" href="ThrustVectoringMount.html">Thrust Vectoring Mount</a>
+          <a href="contact.html" class="nav-header">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+
+        <div class="card">
+          <strong>RC UAV with observation capabilities</strong>
+          <p class="small">This was a smaller scale project which involved 3D-printing a gear system on the rear motor of an RC aircraft. The purpose of
+          having a thrust vectoring system is allowing for much greater maneuverability and eventually the ability to create flight control systems
+          where the plane can stabilize itself with a thrust-vectoring system.  It operates by having a servo, whose gear is integrated with the first 
+          main gear, is attached to a compound gear which leads into the engine-mounted gear.
+          The rear motor is designed to have a vector angle of around 20 degrees in yaw, which means that from the horizontal axis straight down the aircraft,
+          the motor is designed to move left or right 10 degrees in either direction. This was done by doing a 9:1 gear reduction to reduce 180 degrees down
+          to 20 degrees. <br><br> The motor ideally was designed to turn 20 degrees but after testing, it was only rotating 5-10 degrees. This was apparently
+          due to the limits of the ELRS open source radio-control software, which only allows PWM inputs of 1000-2000us when the servo I was using had a range
+          of 500-2500us. I simply changed the gear ratio to be closer to 4:1 because the range was around half of originally designed. 
+          </p>
+          <p class="small">
+            Tools & Skills: 3-D Printing, Onshape, Gear Mechanism<br />
+            <br> Note: Another gear was located between these two gears to complete the mount however this photo was taken before I had mounted the 
+            additional gear, and also before more recent modifications I have made due to problems in the servo range.
+          </p>
+          <img src="images/thrustvector_1.JPEG" class="smallimage">
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
