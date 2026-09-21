@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, MA/New York City, NY<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="projectmargin" href="BUUAV.html">BU UAV Autonomous VTOL Aircraft</a>
+          <a class="projectmargin" href="longrangeUAV.html">Long-Range Capable UAV</a>
+          <a class="active projectmargin" href="flightcontroller_PCB.html">Flight Controller PCB</a>
+          <a class="projectmargin" href="ESC_PCB.html">ESC PCB</a>
+          <a class="projectmargin" href="ELRS_PCB.html">Radio Reciever PCB</a>
+          <a class="projectmargin" href="BMSwithUSBCPD.html">Li-ion BMS with USB-C PD</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">FPV Orientation Tracking</a>
+          <a class="nav-header" href="contact.html">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+        <div class="card">
+          <strong>PCB Flight Controller V2</strong>
+          <p class="small">A second iteration of my version one flight controller, this STM32F405 flight controller attempted to achieve the goal of minimizing footprint as much as possible
+            for small airframes/fuselages and to pack as many peripherals into that space. This version was upgraded in various ways, including a different IMU, an analog video
+            on-screen-display chip for data on video feeds, digital video transmission ports, and new JST connectors. The board utilizes UART, I2C, SPI, and various PWM ports for motors/actuators 
+            with the flight controller switched to the lower cost F405 series from STM electronics, as lowering cost was another main aim for this revision.
+          <p class="small">
+            Tools & Skills: PCB Design, 4-Layer, UART/I2C/SPI communication, KiCAD, STM32 Microcontroller, small footprint<br />
+          </p>
+          <figure>
+          <figcaption>Flight Controller 3D View</figcaption>
+          <img src="images/flightcontrollerv2_3d.jpg" class="verysmallimage">
+          </figure>
+        </div>
+        <div class="card">
+          <strong>PCB Flight Controller V1</strong>
+          <p class="small">This flight controller was my first version, designed to be a capable autonomous aircraft flight controller with necessary sensors/components,
+          able to handle a large variety of PWM ports, and have a wide range of capabilities for different ports and sensors.
+          The microcontroller used is a STM32H743 and the board includes a port for an ELRS reciever, GPS, 14 PWM, analog sensors and voltage measurement, and a SPI interface port.
+          The board is designed mainly for fixed-wing aircraft, and specifically a VTOL aircraft which is why there are so many PWM pins, but the board can be used with quadcopters too.
+          I also included a USB port on the flight controller to be able to load software onto the microcontroller such as Ardupilot. 
+          I tried to keep the board size relatively small, and size comes in around a 70mmx70mm square.
+          <p class="small">
+            Tools & Skills: PCB Design, KiCAD, STM32 Microcontroller<br />
+            Links: <a href="https://github.com/budgetcuts1/deltaflightcontroller_v1">Flight Controller GitHub</a>
+          </p>
+          <figure>
+          <figcaption>Flight Controller PCB</figcaption>
+          <img src="images/flightcontrollerv1_pcb.jpg" class="smallimage">
+          </figure>
+          <figure>
+          <figcaption>Flight Controller 3D View</figcaption>
+          <img src="images/deltaflightcontroller3dview_1.jpg" class="smallimage">
+          </figure>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -12,45 +12,53 @@
         <div class="name">Kyler Walbeek</div>
         <div class="subtitle">Boston University · 2028</div>
         <div class="smallsubtitle">Boston, MA/New York City, NY<br>Mechanical Engineering</div>
-
        <nav class="nav">
           <a class="active nav-header" href="index.html">Home</a>
           <h3 class="projectmargin section-title"> Projects</h3>
-          <a class="projectmargin" href="RCUAVProject.html">RC UAV</a>
-          <a class="projectmargin" href="flightcontrollerandelrspcbProject.html">Flight Controller & ELRS Reciever PCB</a>
-          <a class="projectmargin" href="FPVtrackingProject.html">Radio FPV Orientation Tracking</a>
-          <a class="projectmargin" href="4SbatteryProject.html">4S Battery Pack</a>
-          <a class="projectmargin" href="ThrustVectoringMount.html">Thrust Vectoring Mount</a>
-          <a href="contact.html" class="nav-header">Contact</a>
+          <a class="projectmargin" href="BUUAV.html">BU UAV Autonomous VTOL Aircraft</a>
+          <a class="projectmargin" href="longrangeUAV.html">Long-Range Capable UAV</a>
+          <a class="projectmargin" href="flightcontroller_PCB.html">Flight Controller PCB</a>
+          <a class="projectmargin" href="ESC_PCB.html">ESC PCB</a>
+          <a class="projectmargin" href="ELRS_PCB.html">Radio Reciever PCB</a>
+          <a class="projectmargin" href="BMSwithUSBCPD.html">Li-ion BMS with USB-C PD</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">FPV Orientation Tracking</a>
+          <a class="nav-header" href="contact.html">Contact</a>
         </nav>
       </aside>
 
       <main class="main">
         <h1>Hi, I’m Kyler</h1>
         <p>
-          I’m a mechanical engineering student at Boston University with a concentration in aerospace engineering. My interests consist of drone building, robotics, custom electronics, 
-          and unique aerodynamic design. I especially like building UAVs, due to the breadth of exposure you get to various different engineering fields, in avionics design, streamlined aerodynamics, 
-          and control systems. 
+          I’m a mechanical engineering student at Boston University concentrating in aerospace and focusing in UAV design, robotics, and custom electronics. I enjoy working at the intersection
+          of mechanical and hardware design, integrating electromechanical and autonomous systems by handling everything from CAD design, board layout, to control algorithms.
         </p>
 
         <h2>Highlights</h2>
         <div class="card">
-          <strong>RC UAV Project</strong>
-          <div class="small">I wanted to have a fully customized drone that could be easily modified with different sensors/devices on digital and analog lines, so I designed, built, wired, and coded a 
-          flyable remote-controlled UAV with the computer being an ESP32 microcontroller. </div>
+          <strong>BU UAV Autonomous VTOL</strong>
+          <div class="small">I took part in the BU UAV Autonomous VTOL specializing in aerodynamic and mechanical design as well as electronic integration, 
+          and led the construction of a 2-meter wingspan aircraft intended for search-and-rescue/terrainmapping missions, that was able to hover in plane utilizing GPS/Compass, fly autonomously to waypoints with an
+           onboard flight controller, and takeoff and land on its own with only input for the flight plan.</div>
         </div>
+        
         <div class="card">
-        <img src="images/rcuav2.jpg" class="largeimage">
+          <figure>
+          <figcaption>Revision 1</figcaption>
+          <img src="images/quadplane1.jpg" class="mediumimage">
+          </figure>
+          <figure>
+          <figcaption>Revision 2</figcaption>
+          <img src="images/quadplane2.jpg" class="verysmallimage">
+          </figure>
         </div>
 
         <div class="card">
-          <strong>FPV RC Head-Tracking Gimbal</strong>
-          <div class="small">This project uses a gyroscope and radio to operate a 2-axis gimbal FPV camera which allows for any direction
-            you are facing to be translated into a specific direction the camera is facing. This allows you to operate a camera wirelessly
-            in real time and follows your head movements.</div>
+          <strong>Electronic Speed Controller</strong>
+          <div class="small">I designed an ESC for a brushless DC motor as a PCB in KiCad, utilizing mosfets, a gate driver and microcontroller, 
+            high current power planes, and pulse width modulation control by using a flight controller.</div>
         </div>
         <div class="card">
-        <img src="images/cameragimbal1.jpg" class="largeimage">
+        <img src="images/ESC_3dview1.jpg" class="mediumimage">
         </div>
       </main>
     </div>

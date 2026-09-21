@@ -16,21 +16,34 @@
         <nav class="nav">
           <a class="nav-header" href="index.html">Home</a>
           <h3 class="projectmargin section-title"> Projects</h3>
-          <a class="active projectmargin" href="RCUAVProject.html">RC UAV</a>
-          <a class="projectmargin" href="flightcontrollerandelrspcbProject.html">Flight Controller & ELRS Reciever PCB</a>
-          <a class="projectmargin" href="FPVtrackingProject.html">Radio FPV Orientation Tracking</a>
-          <a class="projectmargin" href="4SbatteryProject.html">4S Battery Pack</a>
-          <a class="projectmargin" href="ThrustVectoringMount.html">Thrust Vectoring Mount</a>
-          <a href="contact.html" class="nav-header">Contact</a>
+          <a class="projectmargin" href="BUUAV.html">BU UAV Autonomous VTOL Aircraft</a>
+          <a class="active projectmargin" href="longrangeUAV.html">Long-Range Capable UAV</a>
+          <a class="projectmargin" href="flightcontroller_PCB.html">Flight Controller PCB</a>
+          <a class="projectmargin" href="ESC_PCB.html">ESC PCB</a>
+          <a class="projectmargin" href="ELRS_PCB.html">Radio Reciever PCB</a>
+          <a class="projectmargin" href="BMSwithUSBCPD.html">Li-ion BMS with USB-C PD</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">FPV Orientation Tracking</a>
+          <a class="nav-header" href="contact.html">Contact</a>
         </nav>
       </aside>
 
       <main class="main">
         <h1>Projects</h1>
-
         <div class="card">
-          <strong>RC UAV with observation capabilities</strong>
-          <p class="small">This project consisted of various different aspects which I had to combine into one working system. The plane included custom coded controls, operated by
+        <strong>Long Range UAV V2</strong>
+        <p class="small">I wanted to make an autonomous/remotely operated aircraft that would be capable of reaching a far range (theoretical 10+ km range) by utilizing various
+          different features, such as a high aspect ratio wing, short/lightweight fuselage, and energy to weight (wh/kg) density batteries.
+          I achieved this by designing a glider-like wing, using a pusher-prop configuration to keep a fairly short aircraft while maintaining CG point, and spot-welding custom
+          Li-ion batteries which can have up to 40% increase wh/kg over typically-used LiPo chemistry batteries.
+          <br><br>In testing the aircraft, I was able to reach an effeciency of approximately 120 mAh/km with a cruise speed of approimately 50km/h, which was essentially
+          exactly what I aimed for. The plane was capable of loitering for long periods of time while also having a high effeciency, and would reach the 10km goal if the data was 
+          extrapolated to the total range of the aircraft.</p><br><br>
+          <img src="images/fixedwinguav1.jpg" class="smallimage">
+          <img src="images/fixedwinguav2.jpg" class="mediumimage">
+          </div>
+        <strong>Long Range UAV V1</strong>
+        <div class="card">
+          <p class="small">This project consists of two separate proj of various different aspects which I had to combine into one working system. The plane included custom coded controls, operated by
           flight simulator joystick, connected by ESP32 microcontrollers, and had Rylr998 radio modules to maintain communication. It was built in SolidWorks CAD initially to 
           get a preliminary design and create the blueprints for the foamboard structure of the wing. I used Solidworks Flow Simulation to optimize the chord length of the aircraft and
           also selected the SD7037 airfoil as it has very good performance at lower Reynolds numbers, since the drone typically operates at a Reynolds number lower than 1 million.
@@ -41,8 +54,9 @@
           increase the data rate between the transmitter and reciever. Most of the individual data values were packed to 1 byte, which gives a range of 255 and contains the 
           joystick's integer range of 0 to 180. Apart from the main control surfaces on the aircraft, there is a 2-axis gimbal mounted on the underside of the UAV which allows 
           for rotation in a semi-sphere range underneath the aircraft and can be either mounted with a small video camera or a live FPV camera.</p>
+          <p class="small"></p>
           <p class="small">
-            Tools & Skills: SolidWorks, CFD, ESP32 Microcontroller, Python, C++<br />
+            Tools & Skills: SolidWorks, CFD, Autonomous, UAV Design, ESP32 Microcontroller, Python, C++<br />
             Links: <a href="https://github.com/budgetcuts1/RCUAVProject_1">RC UAV GitHub</a>
           </p>
           <img src="images/rcuav1.JPG" class="smallimage">

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, MA/New York City, NY<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="projectmargin" href="BUUAV.html">BU UAV Autonomous VTOL Aircraft</a>
+          <a class="projectmargin" href="longrangeUAV.html">Long-Range Capable UAV</a>
+          <a class="projectmargin" href="flightcontroller_PCB.html">Flight Controller PCB</a>
+          <a class="active projectmargin" href="ESC_PCB.html">ESC PCB</a>
+          <a class="projectmargin" href="ELRS_PCB.html">Radio Reciever PCB</a>
+          <a class="projectmargin" href="BMSwithUSBCPD.html">Li-ion BMS with USB-C PD</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">FPV Orientation Tracking</a>
+          <a class="nav-header" href="contact.html">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+        <div class="card">
+          <strong>Electronic Speed Controller</strong>
+          <p class="small">An issue I had with some drone prototypes was having electronic speed controllers that were cost-effective while also meeting sufficient requirements. It was difficult to find a BLDC ESC
+            that would meet current and especially voltage requirements, as many drones commonly use 6 cell Lipo batteries, while most cheaper ESCs only supported up to 4 cell. So, I set out to make
+            an affordable and well-performing ESC that would meet these specifications I had in mind. This is an 2-6 cell electronic speed controller for a BLDC motor, designed to be able to take an DC voltage input, and output alternating
+            current in the form of three seperate phases. This is timed to drive the inner rotor via a magnetic field when current is applied to different phases,
+          and is controlled via a microcontroller and gate driver. This ESC specifically uses an ARM Cortex-M4 MCU by Artery Technology. The application for this ESC
+        is high-current draw drone brushless motors from 7.4 to 25.2 volts, or two-six LiPo/Li-ion cells. I used high current power and ground planes in order to supports
+      up to 30 amps of current draw, and external heat sinks can be used in order to manage the thermals of the ESC.</p>
+          <p class="small">
+            Tools & Skills: PCB Design, BLDC ESC, Motor Control, Power Electronics, KiCAD, STM32 Microcontroller<br />
+          </p>
+          <figure>
+          <figcaption>ESC PCB</figcaption>
+          <img src="images/ESC_pcb2.jpg" class="smallimage">
+          </figure>
+          <figure>
+          <figcaption>ESC Assembled</figcaption>
+          <img src="images/ESC_pcb1.jpg" class="smallimage">
+          </figure>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

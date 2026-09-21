@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="name">Kyler Walbeek</div>
+        <div class="subtitle">Boston University · 2028</div>
+        <div class="smallsubtitle">Boston, MA/New York City, NY<br>Mechanical Engineering</div>
+
+        <nav class="nav">
+          <a class="nav-header" href="index.html">Home</a>
+          <h3 class="projectmargin section-title"> Projects</h3>
+          <a class="projectmargin" href="BUUAV.html">BU UAV Autonomous VTOL Aircraft</a>
+          <a class="projectmargin" href="longrangeUAV.html">Long-Range Capable UAV</a>
+          <a class="projectmargin" href="flightcontroller_PCB.html">Flight Controller PCB</a>
+          <a class="projectmargin" href="ESC_PCB.html">ESC PCB</a>
+          <a class="projectmargin" href="ELRS_PCB.html">Radio Reciever PCB</a>
+          <a class="projectmargin" href="BMSwithUSBCPD.html">Li-ion BMS with USB-C PD</a>
+          <a class="projectmargin" href="FPVtrackingProject.html">FPV Orientation Tracking</a>
+          <a class="nav-header" href="contact.html">Contact</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h1>Projects</h1>
+        <div class="card">
+          <strong>BMS with USB-C PD and EPR 3.1</strong>
+          <p class="small">A problem I had was not having enough power capacity for my electronics and also for charging batteries. I wanted a power bank that would self-manage
+            charging and discharging, and be able to handle 8 cells at 33.6V (max charge). I achieved this using a central BQ76942PFBR chip from Texas Instruments, and various
+            other chips including USB-C PD with 3.1 EPR negotiation (28V output), and using a buck-boost converter in order to charge the chip. There is also logic and data Controller
+            using an ESP32-S3 microcontroller to be able to recieve information from the various chips onboard and be able to deduce BMS status/charging percentages. The main purpose I had in mind for this
+            PCB was to be used with an 8S1P or 8S2P pack inside a enclosure and to be used as a high-capacity power bank.
+          </p>
+          <p class="small">
+            Tools & Skills: PCB Design, BMS design, USB-C PD, KiCAD, ESP32 Microcontroller<br />
+          </p>
+          <figure>
+          <figcaption>BMS Schematic</figcaption>
+          <img src="images/BMS_schematic1.jpg" class="mediumimage">
+          </figure>
+        </div>
+        <div class="card">
+          <strong>Custom Battery Packs</strong><br>
+          <strong>4S High-Amperage Li-Ion</strong>
+          <p class="small">This is a spot-welded battery pack which uses four Reliance RS50 21700 Li-ion batteries and a copper-nickel sandwich
+          to build a nominal 16.8 V or 4S battery. This is done by spot welding them in series, and the copper was added to the nickel in order to
+          increase the maximum amps the battery can handle, due to the cells being high-performance and high-amperage. There is an XT60 connector
+          for the main power supply, and JST-XH connector for balance charging. One of the main advantages of Li-ion is that they can be much lighter
+          for the same amount of watt-hours stored compared to Li-Po chemsitry, although typically Li-Pos have higher discharge capabilities. The Li-ion
+          cells I used were designed to have a greater performance than typical 21700 cells, and contains more than required for small UAV aircraft power.
+          </p>
+          <p class="small">
+            Tools & Skills: Spot Welding, Li-ion Batteries, Soldering
+          </p>
+          <img src="images/4sliionbattery1.jpg" class="smallimage">
+          <br><br>
+          <strong>6S Li-Ion</strong>
+          <p class="small">Similar to the 4S battery, this battery is rated for a higher voltage up to 25.2 volts at full charge, and has a custom 3D-printed housing
+            designed to enclose the battery. Heat shrink is used as insulation, and this battery also performs better in terms of capacity compared to LiPo chemistry cells.
+          </p>
+          <p class="small">
+            Tools & Skills: Spot Welding, Li-ion Batteries, Soldering
+          </p>
+          <img src="images/6sliionbattery1.jpg" class="smallimage">
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
